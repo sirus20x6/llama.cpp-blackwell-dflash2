@@ -60,7 +60,7 @@ Defaults:
 - 262144-token context;
 - 4096 batch and ubatch;
 - MXFP8 K/V cache;
-- three DFlash2 draft tokens;
+- seven DFlash2 draft tokens (the checkpoint's eight-token block includes one anchor token);
 - OpenAI-compatible server on port 9080.
 
 All important paths and runtime settings can be overridden with environment variables. For example:

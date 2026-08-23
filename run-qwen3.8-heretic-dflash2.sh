@@ -16,7 +16,7 @@ LLAMA_UBATCH_SIZE="${LLAMA_UBATCH_SIZE:-4096}"
 LLAMA_PARALLEL="${LLAMA_PARALLEL:-1}"
 CACHE_TYPE_K="${CACHE_TYPE_K:-mxfp8}"
 CACHE_TYPE_V="${CACHE_TYPE_V:-mxfp8}"
-DFLASH_DRAFT_MAX="${DFLASH_DRAFT_MAX:-3}"
+DFLASH_DRAFT_MAX="${DFLASH_DRAFT_MAX:-7}"
 
 SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-qwen3.8-27b-heretic-ara-mxfp6-mxfp8-dflash2}"
 LLAMA_HOST="${LLAMA_HOST:-0.0.0.0}"
@@ -65,7 +65,6 @@ server_args=(
     --spec-draft-model "${DRAFT_MODEL_PATH}"
     --spec-type draft-dflash
     --spec-draft-n-max "${DFLASH_DRAFT_MAX}"
-    --spec-draft-n-min 0
     --n-gpu-layers all
     --spec-draft-ngl all
     --spec-draft-device CUDA0
